@@ -3,12 +3,18 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-white; /* Set the body background to white */
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode transparent background for the body */
+    color: theme('colors.foreground'); /* Ensure text color is set */
+  }
+
   .widget {
-    --background: rgba(255, 255, 255, 0.8); /* Light mode transparent background */
+    --background: transparent; /* No background for the widget itself */
     --foreground: 222.2 84% 4.9%;
-    --card: rgba(255, 255, 255, 0.8); /* Transparent card background */
+    --card: 222.2 84% 4.9%; /* Use a solid color for the card */
     --card-foreground: 222.2 84% 4.9%;
-    --popover: rgba(255, 255, 255, 0.8); /* Transparent popover background */
+    --popover: 222.2 84% 4.9%; /* Use a solid color for the popover */
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -32,11 +38,11 @@
   }
 
   .dark .widget {
-    --background: rgba(34, 34, 34, 0.8); /* Dark mode transparent background */
+    --background: transparent; /* No background for the widget itself */
     --foreground: 210 40% 98%;
-    --card: rgba(34, 34, 34, 0.8); /* Transparent card background */
+    --card: 222.2 84% 4.9%; /* Use a solid color for the card in dark mode */
     --card-foreground: 210 40% 98%;
-    --popover: rgba(34, 34, 34, 0.8); /* Transparent popover background */
+    --popover: 222.2 84% 4.9%; /* Use a solid color for the popover in dark mode */
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -64,6 +70,6 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground;
+    @apply bg-background text-foreground;
   }
 }
