@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white; /* Set the body background to white */
-    background-color: rgba(255, 255, 255, 0.8); /* Light mode transparent background for the body */
-    color: theme('colors.foreground'); /* Ensure text color is set */
-  }
-
+  /* Base widget styles */
   .widget {
-    --background: transparent; /* No background for the widget itself */
+    --background: transparent; /* Make the widget background transparent */
     --foreground: 222.2 84% 4.9%;
-    --card: 222.2 84% 4.9%; /* Use a solid color for the card */
+    --card: 222.2 84% 4.9%; /* Set a solid color for the card */
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 222.2 84% 4.9%; /* Use a solid color for the popover */
+    --popover: 222.2 84% 4.9%; /* Set a solid color for the popover */
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -37,12 +32,13 @@
     --radius: 0.5rem;
   }
 
+  /* Dark mode widget styles */
   .dark .widget {
-    --background: transparent; /* No background for the widget itself */
+    --background: transparent; /* Make the widget background transparent */
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%; /* Use a solid color for the card in dark mode */
+    --card: 222.2 84% 4.9%; /* Solid color for the card in dark mode */
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%; /* Use a solid color for the popover in dark mode */
+    --popover: 222.2 84% 4.9%; /* Solid color for the popover in dark mode */
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -65,11 +61,16 @@
   }
 }
 
+/* Base styles for the whole page */
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border; /* Apply border styles to all elements */
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: rgba(255, 255, 255, 0.8); /* Light mode transparent background for the body */
+    color: theme('colors.foreground'); /* Set text color */
+  }
+  .dark body {
+    background-color: rgba(34, 34, 34, 0.8); /* Dark mode transparent background for the body */
   }
 }
