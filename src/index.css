@@ -1,13 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   .widget {
-    --background: 0 0% 100%;
+    --background: rgba(255, 255, 255, 0.8); /* Light mode transparent background */
     --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
+    --card: rgba(255, 255, 255, 0.8); /* Transparent card background */
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
+    --popover: rgba(255, 255, 255, 0.8); /* Transparent popover background */
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -27,14 +28,15 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
-  .dark .widget{
-    --background: 222.2 84% 4.9%;
+
+  .dark .widget {
+    --background: rgba(34, 34, 34, 0.8); /* Dark mode transparent background */
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: rgba(34, 34, 34, 0.8); /* Transparent card background */
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    --popover: rgba(34, 34, 34, 0.8); /* Transparent popover background */
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -53,9 +55,10 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
+    --chart-5: 340 75% 55%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
