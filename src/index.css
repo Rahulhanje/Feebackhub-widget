@@ -1,15 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
-  /* Base widget styles */
   .widget {
-    --background: transparent; /* Make the widget background transparent */
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    --card: 222.2 84% 4.9%; /* Set a solid color for the card */
+    --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 222.2 84% 4.9%; /* Set a solid color for the popover */
+    --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
@@ -29,16 +27,14 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.5rem
   }
-
-  /* Dark mode widget styles */
-  .dark .widget {
-    --background: transparent; /* Make the widget background transparent */
+  .dark .widget{
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%; /* Solid color for the card in dark mode */
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%; /* Solid color for the popover in dark mode */
+    --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
@@ -57,20 +53,14 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-5: 340 75% 55%
   }
 }
-
-/* Base styles for the whole page */
 @layer base {
   * {
-    @apply border-border; /* Apply border styles to all elements */
+    @apply border-border;
   }
   body {
-    background-color: rgba(255, 255, 255, 0.8); /* Light mode transparent background for the body */
-    color: theme('colors.foreground'); /* Set text color */
-  }
-  .dark body {
-    background-color: rgba(34, 34, 34, 0.8); /* Dark mode transparent background for the body */
+    @apply bg-background text-foreground;
   }
 }
