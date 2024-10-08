@@ -8,7 +8,9 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Widget projectId="1"></Widget> 
+    <div>
+      <Widget  projectId="1"></Widget>
+    </div> 
   )
 }
 
