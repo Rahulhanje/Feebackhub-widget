@@ -58,10 +58,3 @@ npm install
    ```
 
 2. Open [http://localhost:5173/](http://localhost:5173/) in your browser to view the application.
-
-## Contact Information
-
-For any questions or feedback, please contact the project maintainers:
-
-* **Email:** rahulhanje0.7@gmail.com
-
